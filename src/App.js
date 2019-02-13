@@ -1,25 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import LogoAnimation from './Components/LogoAnimation.js';
+import Menu from './Components/Menu.js';
+import {Link} from 'react-router-dom';
+import SocialMedia from './Components/SocialMedia'
+
+import { Switch, Route } from 'react-router-dom';
+import About from './Components/About.js';
+import Event from './Components/Event.js';
+import Livestream from './Components/Livestream.js';
+
+
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      logoNotOver: true
+    }
+    this.logoAnimationCheck = this.logoAnimationCheck.bind(this)
+  }
+
+  logoAnimationCheck = () => {
+    this.setState({
+      logoNotOver: false
+    })
+  }
+
   render() {
+
+    let Main = () => {
+      return(
+        <Switch>
+        <Route exact path='/' render={(props) => <Event />}/>
+        <Route exact path='/About' render={(props) => <About/>}/>
+        <Route exact path='/Event-Guide' render={(props) => <Event />}/>
+        <Route exact path='/Livestream' render={(props) => <Livestream />}/>
+        </Switch>
+      )
+    }
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+      {this.state.logoNotOver ? <LogoAnimation finishedAnimation={this.logoAnimationCheck} /> : <div className="container"><div className="centerBox"><p className="logo"><p><Link to="/"><span className="logo">SISTEM</span></Link></p></p></div>
+      <Menu />
+      <Main />
+      <SocialMedia />
+      </div>}
       </div>
     );
   }

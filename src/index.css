@@ -1,14 +1,279 @@
+@font-face {
+	font-family: hummel;
+	src: url(hummel.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #3e3e3e;
+  font-family: Segoe UI,Roboto,Source Sans Pro,Helvetica,Arial,sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Containers */
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
+}
+
+.page {
+  text-align: center;
+  padding: 10px;
+  flex: 1;
+  background-color: #272324;
+  color: #f2c80f;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  margin: 1em;
+}
+
+
+/* Icons */
+
+.icons a{
+  text-decoration: none;
+  color: #5b8e4b;
+}
+
+
+
+/* Logo Stuff */
+
+
+
+.logo { 
+  font-weight: 100;
+  font-family: hummel;
+  color: #86c323;
+  font-size: 2em;
+
+}
+
+.logo-static { 
+  font-weight: 100;
+  font-family: hummel;
+  color: #86c323;
+  font-size: 4em;
+
+}
+
+.logo-rest {
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-name: fadeOut;
+  animation-fill-mode: forwards;
+}
+
+.logoS { 
+  animation-name: Grow;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  position: fixed;
+}
+
+.logoI { 
+  animation-name: animateI;
+  animation-duration: 1s;
+  animation-delay: 5.125s;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  position: fixed;
+}
+
+.logoS2 { 
+  animation-name: animateS2;
+  animation-duration: 1s;
+  animation-delay: 5.25s;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  position: fixed;
+}
+
+.logoT { 
+  animation-name: animateT;
+  animation-duration: 1s;
+  animation-delay: 5.275s;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  position: fixed;
+}
+
+.logoE { 
+  animation-name: animateE;
+  animation-duration: 1s;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  position: fixed;
+}
+
+.logoM { 
+  animation-name: animateM;
+  animation-duration: 1s;
+  animation-delay: 5.725s;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  position: fixed;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.centerBox {
+}
+
+
+/* 
+-- Animations by Fraz --
+- Designed for Sistem 2019 -
+*/
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0
+}
+
+
+@keyframes fadeOut {
+
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Grow {
+  0% {
+    font-size: 1em
+  }
+  100% {
+    font-size: 2em;
+  }
+}
+
+@keyframes animateI {
+ 
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateX(.2em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(.55em) translateY(-.95em);
+    font-size: 2em;
+  }
+}
+
+@keyframes animateS2 {
+ 
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateX(1em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(.75em) translateY(-1.9em);
+    font-size: 2em;
+  }
+}
+
+@keyframes animateT {
+ 
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateX(1em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(1.315em) translateY(-2.9em);
+    font-size: 2em;
+  }
+}
+
+@keyframes animateE {
+ 
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateX(1em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(1.69em) translateY(-3.85em);
+    font-size: 2em;
+  }
+}
+
+@keyframes animateM {
+ 
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateX(1em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(2.25em) translateY(-4.8em);
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1000px){
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: space-evenly;
+  }
 }

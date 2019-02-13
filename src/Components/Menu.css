@@ -1,0 +1,44 @@
+.menu-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: .2em;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    text-align: center;
+    padding-left: 0;   
+}
+
+
+
+.menu-item a{
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 20px;
+    font-size: 1.2em;
+    color: #5b8e4b;
+    text-decoration: none;
+}
+
+.menu-item a:hover{
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 20px;
+    font-size: 1.2em;
+    color: #5b8e4b;
+    text-decoration: underline;
+}
+
+@media(max-width: 1000px){
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        margin-top: .2em;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+        text-align: center;
+        padding-left: 0;   
+    }
+}
