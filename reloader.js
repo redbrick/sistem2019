@@ -6,7 +6,7 @@ const http = require('http');
 listener = http.createServer((req, res) => {
    res.writeHead(200, { 'Content-Type': 'text/plain' });
    let ret = "";
-   const reload = spawn( '/bin/sh', ['./reload.sh'] );
+   const reload = spawn( '/bin/sh', [`${__dirname}/reload.sh`] );
    reload.stdout.on('data', (data) => {
       ret += `stdout: ${data}`;
    });
