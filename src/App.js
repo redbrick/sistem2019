@@ -8,6 +8,7 @@ import { Switch, Route } from 'react-router-dom';
 import About from './Components/About.js';
 import Event from './Components/Event.js';
 import Livestream from './Components/Livestream.js';
+import Location from './Components/Location.js';
 
 
 
@@ -42,6 +43,7 @@ class App extends Component {
     return (
       <div>
       {this.state.logoNotOver ? <LogoAnimation finishedAnimation={this.logoAnimationCheck} /> : <div className="container"><div className="centerBox"><p className="logo"><p><Link to="/"><span className="logo">SISTEM</span></Link></p></p></div>
+      <Location />
       <Menu />
       <Main />
       <SocialMedia />

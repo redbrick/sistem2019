@@ -1,6 +1,6 @@
 @font-face {
-	font-family: hummel;
-	src: url(hummel.ttf);
+  font-family: hummel;
+  src: url(hummel.ttf);
 }
 
 body {
@@ -9,7 +9,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #3e3e3e;
-  font-family: Segoe UI,Roboto,Source Sans Pro,Helvetica,Arial,sans-serif;
+  font-family: Segoe UI, Roboto, Source Sans Pro, Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: #fff;
 }
 
 /* Containers */
@@ -25,50 +33,44 @@ body {
   text-align: center;
   padding: 10px;
   flex: 1;
-  background-color: #272324;
-  color: #f2c80f;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin: 1em;
 }
 
-
 /* Icons */
 
-.icons a{
+.icons a {
   text-decoration: none;
   color: #5b8e4b;
 }
 
-
-
 /* Logo Stuff */
 
-
-
-.logo { 
+.logo {
   font-weight: 100;
   font-family: hummel;
   color: #86c323;
-  font-size: 2em;
-
+  font-size: 3em;
+  text-decortation: none;
 }
 
-.logo-static { 
+.logo-static {
   font-weight: 100;
   font-family: hummel;
   color: #86c323;
   font-size: 4em;
-
 }
 
 .logo-rest {
-  animation-duration: 4s;
-  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
   animation-name: fadeOut;
   animation-fill-mode: forwards;
 }
 
-.logoS { 
+.logoS {
   animation-name: Grow;
   animation-duration: 1s;
   animation-delay: 5s;
@@ -77,7 +79,7 @@ body {
   position: fixed;
 }
 
-.logoI { 
+.logoI {
   animation-name: animateI;
   animation-duration: 1s;
   animation-delay: 5.125s;
@@ -86,7 +88,7 @@ body {
   position: fixed;
 }
 
-.logoS2 { 
+.logoS2 {
   animation-name: animateS2;
   animation-duration: 1s;
   animation-delay: 5.25s;
@@ -95,7 +97,7 @@ body {
   position: fixed;
 }
 
-.logoT { 
+.logoT {
   animation-name: animateT;
   animation-duration: 1s;
   animation-delay: 5.275s;
@@ -104,7 +106,7 @@ body {
   position: fixed;
 }
 
-.logoE { 
+.logoE {
   animation-name: animateE;
   animation-duration: 1s;
   animation-delay: 5.5s;
@@ -113,7 +115,7 @@ body {
   position: fixed;
 }
 
-.logoM { 
+.logoM {
   animation-name: animateM;
   animation-duration: 1s;
   animation-delay: 5.725s;
@@ -121,7 +123,6 @@ body {
   display: inline-block;
   position: fixed;
 }
-
 
 .container {
   display: flex;
@@ -133,7 +134,6 @@ body {
 .centerBox {
 }
 
-
 /* 
 -- Animations by Fraz --
 - Designed for Sistem 2019 -
@@ -144,12 +144,10 @@ body {
   animation-duration: 3s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
-  opacity: 0
+  opacity: 0;
 }
 
-
 @keyframes fadeOut {
-
   0% {
     opacity: 1;
   }
@@ -160,7 +158,6 @@ body {
 }
 
 @keyframes fadeIn {
-
   0% {
     opacity: 0;
   }
@@ -172,7 +169,7 @@ body {
 
 @keyframes Grow {
   0% {
-    font-size: 1em
+    font-size: 1em;
   }
   100% {
     font-size: 2em;
@@ -180,25 +177,23 @@ body {
 }
 
 @keyframes animateI {
- 
   0% {
     opacity: 0;
     transform: translateY(0px);
   }
 
   50% {
-    transform: translateX(.2em);
+    transform: translateX(0.2em);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(.55em) translateY(-.95em);
+    transform: translateX(0.55em) translateY(-0.95em);
     font-size: 2em;
   }
 }
 
 @keyframes animateS2 {
- 
   0% {
     opacity: 0;
     transform: translateY(0px);
@@ -210,13 +205,12 @@ body {
 
   100% {
     opacity: 1;
-    transform: translateX(.75em) translateY(-1.9em);
+    transform: translateX(0.75em) translateY(-1.9em);
     font-size: 2em;
   }
 }
 
 @keyframes animateT {
- 
   0% {
     opacity: 0;
     transform: translateY(0px);
@@ -234,7 +228,6 @@ body {
 }
 
 @keyframes animateE {
- 
   0% {
     opacity: 0;
     transform: translateY(0px);
@@ -252,7 +245,6 @@ body {
 }
 
 @keyframes animateM {
- 
   0% {
     opacity: 0;
     transform: translateY(0px);
@@ -269,7 +261,7 @@ body {
   }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
   .content-container {
     display: flex;
     flex-direction: column;

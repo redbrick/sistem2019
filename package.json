@@ -2,7 +2,7 @@
   "name": "sistem",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fraz.redbrick.dcu.ie/sistem",
+  "homepage": "https://sistem.jamesmcdermott.ie",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
