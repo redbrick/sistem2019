@@ -6,14 +6,17 @@ import tracks from '../tracks.js';
 class Event extends Component {
     constructor(props){
         super(props)
-        this.state = {}
         const trackTypes = ['main', 'workshop']
-        for(let i in trackTypes){
-            tracks[trackTypes[i]].forEach((trackArray, n) =>{
-                this.state[trackTypes[i]+n] = 'none'
-            })
-        }
 
+        let initState = {};
+
+         Object.keys(tracks).forEach(trackCategory => {
+            tracks[trackCategory].forEach((track) => {
+               initState[`${trackCategory}-${track[1]}`] = false;
+            }); 
+         }); 
+
+         this.state = initState;
 
         this.handleTracks = this.handleTracks.bind(this)
         this.displayExtra = this.displayExtra.bind(this)
@@ -21,66 +24,94 @@ class Event extends Component {
 
 
     displayExtra = (e) => {
-        let name = e.target.getAttribute('name')
-        let id = e.target.id
-        console.log(name, id)
-        if (this.state[name+id] == ''){
-            this.setState({
-                [name+id]: 'none'
-            })
-        }
-        else{
-            this.setState({
-                [name+id]: ''
-            })
-        }
-        }
+        let name = e.target.parentNode.getAttribute('name')
+         if (!name) {
+            name = e.target.parentNode.parentNode.getAttribute('name');
+         }
+        
+         let tempState = Object.assign({}, this.state);
+         tempState[name] = !tempState[name];
+         this.setState(tempState);
+   }
 
-    handleTracks = (trackName) => {
-        let rows = []
-        tracks[trackName].forEach((trackArray, i) => {
-            rows.push(
-                <Fragment>
-                <tr name={trackName} id={i} onClick={this.displayExtra}>
-                <td name={trackName} id={i}>
-                    {trackArray[0]}
-                </td>
-                <td name={trackName} id={i}>
-                    {trackArray[1]}
-                </td>
-                <td name={trackName} id={i}>
-                    {trackArray[2]}
-                </td>
-                </tr>
-                <tr style={{display: this.state[trackName+i], width: '100%'}}>
-                <td colspan='3'>
-                    {trackArray[3] != '' ? <span style={{contentAlign: 'left', float: 'left'}}>By: {trackArray[3]}</span> : ''}
-                    <br />
-                    <p style={{contentAlign: 'left', float: 'left'}}>
-                        {trackArray[4]}
-                    </p>
-                </td>
-                </tr>
-
-                </Fragment>
-            )
-        })
-        return rows
+   handleTracks = (trackName) => {
+      return tracks[trackName]
+         .map((arr, i) => {
+            return {
+               id: i,
+               time: arr[0],
+               name: arr[1],
+               loc: arr[2],
+               by: arr[3],
+               blurb: arr[4]
+            }
+         }).map(track => (
+            <Fragment key = {`${trackName}-${track.id}-${track.name}`}>
+               <tr
+                  id={`row-${trackName}`}
+                  onClick={this.displayExtra}
+                  name={`${trackName}-${track.name}`}         
+               >     
+                  <td id={`time`}>
+                     {track.time}
+                  </td>
+                  <td id={`name`}>
+                     {track.name}
+                  </td>
+                  <td id={`location`}>
+                     {track.loc}
+                  </td>
+               </tr>
+               <tr 
+                  name={`${trackName}-${track.name}`}
+                  onClick={this.displayExtra}
+                  style={{
+                     display: (
+                        this.state[`${trackName}-${track.name}`]
+                           ? 'table-row'
+                           : 'none'
+                     ),
+                     width: '100%'
+                  }}
+               >
+                  <td colSpan='3'>
+                     {
+                        track.by != ''
+                           ? (
+                              <span style={{contentAlign: 'left', float: 'left'}}>
+                                 By: {track.by}
+                              </span>
+                           )
+                           : ''
+                     }
+                     <p style={{contentAlign: 'left', float: 'left'}}>
+                        {track.blurb}
+                     </p>
+                  </td>
+               </tr>
+            </Fragment>
+         ));
     }
     render() {
         return (
         <div>
-            <h2 classname='fade-in' style={{paddingTop: '1em', paddingLeft: '2em', color: '#86c323'}}>
-                Event Guide
-            </h2>
+            <div className="content-container">
+               <div className="page">
+                  <h2 style = {{ margin: '16pt auto', padding: 0 }}> 
+                      Event Guide
+                  </h2>
+               </div>
+            </div>
             <div className="content-container">
             <div className="page">
                 <h2>Room 1</h2>
                 <table>
                     <thead>
-                        <th>Time</th>
-                        <th>Name</th>
-                        <th>Location</th>
+                        <tr>
+                           <th>Time</th>
+                           <th>Name</th>
+                           <th>Location</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {this.handleTracks('main')}
@@ -91,9 +122,11 @@ class Event extends Component {
                 <h2>Room 2</h2>
                 <table>
                     <thead>
-                        <th>Time</th>
-                        <th>Name</th>
-                        <th>Location</th>
+                        <tr>
+                           <th>Time</th>
+                           <th>Name</th>
+                           <th>Location</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {this.handleTracks('workshop')}

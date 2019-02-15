@@ -43,12 +43,21 @@ td p{
 
 .page {
   text-align: center;
-  padding: 10px;
+  padding: 8px 32px;
   flex: 1;
   background-color: #fff;
-  color: #000;
+  color: white;
+  background-color: rgb(71, 71, 81);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin: 1em;
+}
+
+.page > h2 {
+   color: #86c323;
+   text-align: center;
+   margin: 16px auto;
+   padding: 0;
+   font-size: 32px;
 }
 
 /* Icons */
@@ -66,6 +75,13 @@ td p{
   color: #86c323;
   font-size: 2em;
   text-decortation: none;
+  text-align: center;
+}
+
+.logoSub {
+  text-align: center;
+  color: #fff;
+  font-size: 1em;
 }
 
 .logo-static {
@@ -83,9 +99,9 @@ td p{
 }
 
 .logoS {
-  animation-name: Grow;
-  animation-duration: 1s;
-  animation-delay: 5s;
+  animation-name: animateS1;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   display: inline-block;
   position: fixed;
@@ -93,8 +109,8 @@ td p{
 
 .logoI {
   animation-name: animateI;
-  animation-duration: 1s;
-  animation-delay: 5.125s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   display: inline-block;
   position: fixed;
@@ -102,8 +118,8 @@ td p{
 
 .logoS2 {
   animation-name: animateS2;
-  animation-duration: 1s;
-  animation-delay: 5.25s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   display: inline-block;
   position: fixed;
@@ -111,8 +127,8 @@ td p{
 
 .logoT {
   animation-name: animateT;
-  animation-duration: 1s;
-  animation-delay: 5.275s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   display: inline-block;
   position: fixed;
@@ -120,17 +136,17 @@ td p{
 
 .logoE {
   animation-name: animateE;
-  animation-duration: 1s;
-  animation-delay: 5.5s;
-  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode:forwards;
   display: inline-block;
   position: fixed;
 }
 
 .logoM {
   animation-name: animateM;
-  animation-duration: 1s;
-  animation-delay: 5.725s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   display: inline-block;
   position: fixed;
@@ -144,6 +160,9 @@ td p{
 }
 
 .centerBox {
+   padding: 32px 0;
+   max-width: 1080px;
+   width: 100%;
 }
 
 /* 
@@ -155,6 +174,14 @@ td p{
   animation-name: fadeIn;
   animation-duration: 3s;
   animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fade-in-fast {
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -179,78 +206,92 @@ td p{
   }
 }
 
-@keyframes Grow {
+@keyframes animateS1 {
   0% {
     font-size: 1em;
   }
+  75% {
+    opacity: 1;
+    transform: translate(-0.27em, 0);
+    font-size: 2em;
+  }
   100% {
+    opacity: 0;
+    transform: translate(-0.27em, 0);
     font-size: 2em;
   }
 }
 
 @keyframes animateI {
   0% {
-    opacity: 0;
     transform: translateY(0px);
   }
 
-  50% {
-    transform: translateX(0.2em);
-  }
-
-  100% {
+  75% {
     opacity: 1;
-    transform: translateX(0.55em) translateY(-0.95em);
+    transform: translateX(-0.16em) translateY(-0.95em);
+    font-size: 2em;
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translateX(-0.16em) translateY(-0.95em);
     font-size: 2em;
   }
 }
 
 @keyframes animateS2 {
   0% {
-    opacity: 0;
     transform: translateY(0px);
   }
 
-  50% {
-    transform: translateX(1em);
+  75% {
+    opacity: 1;
+    transform: translateX(0.33em) translateY(-1.94em);
+    font-size: 2em;
   }
 
   100% {
-    opacity: 1;
-    transform: translateX(0.75em) translateY(-1.9em);
+    opacity: 0;
+    transform: translateX(0.33em) translateY(-1.94em);
     font-size: 2em;
   }
 }
 
 @keyframes animateT {
   0% {
-    opacity: 0;
     transform: translateY(0px);
   }
 
-  50% {
-    transform: translateX(1em);
+  25% {
+    transform: translateX(0.3);
   }
 
-  100% {
+  75% {
     opacity: 1;
-    transform: translateX(1.315em) translateY(-2.9em);
+    transform: translateX(0.58em) translateY(-2.9em);
+    font-size: 2em;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0.58em) translateY(-2.9em);
     font-size: 2em;
   }
 }
 
 @keyframes animateE {
   0% {
-    opacity: 0;
     transform: translateY(0px);
   }
 
-  50% {
-    transform: translateX(1em);
+  75% {
+    opacity: 1;
+    transform: translateX(1.69em) translateY(-3.85em);
+    font-size: 2em;
   }
 
   100% {
-    opacity: 1;
+    opacity: 0;
     transform: translateX(1.69em) translateY(-3.85em);
     font-size: 2em;
   }
@@ -262,13 +303,15 @@ td p{
     transform: translateY(0px);
   }
 
-  50% {
-    transform: translateX(1em);
-  }
-
-  100% {
+  75% {
     opacity: 1;
-    transform: translateX(2.25em) translateY(-4.8em);
+    transform: translateX(1.79em) translateY(-4.8em);
+    font-size: 2em;
+  }
+  
+  100% {
+    opacity: 0;
+    transform: translateX(1.79em) translateY(-4.8em);
     font-size: 2em;
   }
 }

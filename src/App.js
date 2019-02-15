@@ -10,47 +10,67 @@ import Event from './Components/Event.js';
 import Livestream from './Components/Livestream.js';
 import Location from './Components/Location.js';
 
+const Main = () => {
+   return(
+      <Switch>
+         <Route exact path='/' render={(props) => <Event />}/>
+         <Route exact path='/About' render={(props) => <About/>}/>
+         <Route exact path='/Event-Guide' render={(props) => <Event />}/>
+         <Route exact path='/Livestream' render={(props) => <Livestream />}/>
+      </Switch>
+   )
+}
 
+const Home = () => (
+   <div className="container fade-in-fast">
+      <div className="centerBox">
+         <div className="logo">
+            <Link to="/">
+               <span className="logo">SISTEM</span>
+            </Link>
+         </div>
+         <Location />
+         <Menu />
+         <Main />
+         <SocialMedia />
+      </div>
+   </div>
+);
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      logoNotOver: true
-    }
-    this.logoAnimationCheck = this.logoAnimationCheck.bind(this)
-  }
+         logoOver: localStorage.getItem('seenLogo') !== "false"
+      }
+      this.logoAnimationCheck = this.logoAnimationCheck.bind(this)
+   }
 
-  logoAnimationCheck = () => {
-    this.setState({
-      logoNotOver: false
-    })
-  }
+   logoAnimationCheck = () => {
+      this.setState({
+         logoOver: true
+      }, () => {
+         localStorage.setItem('seenLogo', true);
+      });
+   }
 
-  render() {
+   render() {
+      const Loader = () => (
+         <LogoAnimation 
+            finishedAnimation={this.logoAnimationCheck}
+         />
+      );
 
-    let Main = () => {
-      return(
-        <Switch>
-        <Route exact path='/' render={(props) => <Event />}/>
-        <Route exact path='/About' render={(props) => <About/>}/>
-        <Route exact path='/Event-Guide' render={(props) => <Event />}/>
-        <Route exact path='/Livestream' render={(props) => <Livestream />}/>
-        </Switch>
-      )
-    }
-
-    return (
-      <div>
-      {this.state.logoNotOver ? <LogoAnimation finishedAnimation={this.logoAnimationCheck} /> : <div className="container"><div className="centerBox"><p className="logo"><p><Link to="/"><span className="logo">SISTEM</span></Link></p></p></div>
-      <Location />
-      <Menu />
-      <Main />
-      <SocialMedia />
-      </div>}
-      </div>
-    );
-  }
+      return (
+         <div>
+            {
+               !this.state.logoOver 
+                  ? <Loader />
+                  : <Home /> 
+            }
+         </div>
+      );
+   }
 }
 
 export default App;
