@@ -1,17 +1,9 @@
-import React, { Component } from 'react';
-import './Menu.css';
-import {Link} from 'react-router-dom';
+import React from 'react';
 
+const Location = () => (
+   <p className = "logoSub">
+      The Hub, Dublin City University | 2nd March 2019
+   </p>
+);
 
-
-class Location extends Component {
-    
-    render() {
-        return (
-            <p style={{color:'#fff', fontSize: '1em'}}>The Hub, Dublin City University | 2nd March 2019</p>
-      );
-    }
-  }
-  
-  export default Location;
-  
+export default Location;
