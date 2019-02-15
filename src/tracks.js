@@ -2,9 +2,11 @@ const tracks = {
     "main":[[
         "09:30", "Breakfast", "Solas Room"
     ],[
-        "10:15", "Open Source Firmware and it’s impact on Datacenter & Networking Industries.", "Solas Room"
+        "10:00", "Introduction", "Solas Room"
     ],[
-        "11:15", "Google Talk", "Solas Room"
+        "10:15", "Impacts of Open Source Firmware on Datacenter & Networking Industries", "Solas Room"
+    ],[
+        "11:15", "Google Tech Talk", "Solas Room"
     ],[
         "12:15", "5 Years Later, Is Docker Still Delivering? ", "Solas Room"
     ],[
@@ -12,7 +14,7 @@ const tracks = {
     ],[
         "14:00", "The History of Irish Netsocs", "Solas Room"
     ],[
-        "15:00", "Demonware Talk ", "Solas Room"
+        "15:00", "Shipping it - How to put your software into production  ", "Solas Room"
     ],[
         "16:00", "TBA", "Solas Room"
     ],[
