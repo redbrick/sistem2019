@@ -25,7 +25,7 @@ class Livestream extends Component {
         }
         return (
         <div>
-            <h2 classname='fade-in' style={{paddingTop: '1em', paddingLeft: '2em', color: '#f2ae1d'}}>
+            <h2 classname='fade-in' style={{paddingTop: '1em', paddingLeft: '2em', color: '#86c323'}}>
                 Live Stream
             </h2>
             <div className="content-container">

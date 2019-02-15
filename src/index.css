@@ -8,7 +8,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #3e3e3e;
+  background-image: url("https://files.slack.com/files-pri/T02KC32T2-FG6UBGBUG/greenbg.jpg");
   font-family: Segoe UI, Roboto, Source Sans Pro, Helvetica, Arial, sans-serif;
 }
 
@@ -52,7 +52,7 @@ h2 {
   font-weight: 100;
   font-family: hummel;
   color: #86c323;
-  font-size: 3em;
+  font-size: 2em;
   text-decortation: none;
 }
 

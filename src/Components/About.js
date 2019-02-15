@@ -5,30 +5,27 @@ class About extends Component {
     render() {
         return (
         <div>
-            <h2 classname='fade-in' style={{paddingTop: '1em', paddingLeft: '2em', color: '#f2ae1d'}}>
+            <h2 classname='fade-in' style={{paddingTop: '1em', paddingLeft: '2em', color: '#86c323'}}>
                 About SISTEM
             </h2>
             <div className="content-container">
-            <div className="page">
-                <h2>What Does SISTEM Mean?</h2>
+            <div className="page" style={{textAlign: 'left'}}>
+                <h2>What is SISTEM?</h2>
                 <p>
-                SISTEM is and acronym for the Students Inter Society Tech &amp;q Enterprise Meetup. It’s pretty self explanatory, we provide a link between Students and those in the world of Tech and Enterprise in a casual meetup environment.
-                    </p>
-            </div>
-           <div className="page">
-            <h2>What's the idea behind SISTEM?</h2>
-                <p>
-                SISTEM was born from the minds of students who love networking, conference-styled meetups and all things tech. The societies behind SISTEM are Redbrick, DIT Compsoc, DUCSS, and DU Netsoc. They recognised that there is no event in Ireland targets topic in a way that doesn’t go above most students’ heads.
+                    SISTEM is a meetup style conference run by students, for students. SISTEM helps provide a link between students and those in the world of tech and enterprise in a casual meetup environment.
                 </p>
+                <br/>
                 <p>
-                A lot of the material at conferences across the country is usually geared towards the graduates rather than the undergraduates. SISTEM is run by a team of undergraduates, so we know what this can feel like. It can be alienating and rather off putting.
+                    Building on the foundations of the inaugural event in 2018, SISTEM 2019 promises to cater for multiple skills levels on the day, with speakers from an array of different companies, as well as workshops, a live tech panel, and lightning talks! On top of all this, one of our lucky attendees will walk away with a brand new Xbox One courtesy of Microsoft!
                 </p>
-            </div>
-           <div className="page">
-            <h2>When and Where?</h2>
-            <p>
-                SISTEM 2019 Will take place in The Venue, DCU, Dublin in 2019. 
-            </p>
+                <br/>
+                <p>
+                    In short, Redbrick DCU, DUCSS, UCD Netsoc, DIT Compsoc, DU Netsoc, MUCSS and UCD Netsoc have come together to organise the student tech event of the year!
+                </p>
+                <br/>
+                <p>
+                    Tickets are €10 each, and all proceeds will go to charity. Tickets can be purchased at https://tickets.redbrick.dcu.ie/
+                </p>
             </div>
            </div>
         </div>
