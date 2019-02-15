@@ -24,7 +24,7 @@ class About extends Component {
                 </p>
                 <br/>
                 <p>
-                    Tickets are €10 each, and all proceeds will go to charity. Tickets can be purchased at https://tickets.redbrick.dcu.ie/
+                    Tickets are €10 each, and all proceeds will go to charity. Tickets can be purchased <a href='https://tickets.redbrick.dcu.ie/'>here.</a>
                 </p>
             </div>
            </div>

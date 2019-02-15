@@ -20,7 +20,7 @@ class LogoAnimation extends Component {
         </li>
         <li className="menu-item">
         {/*LINK TO THE TICKET SALES SITE GOES BELOW*/}
-        <a href='#'>Tickets</a>
+        <a href='https://tickets.redbrick.dcu.ie/'>Tickets</a>
         </li>
         </ul>
       );

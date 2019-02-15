@@ -8,7 +8,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://files.slack.com/files-pri/T02KC32T2-FG6UBGBUG/greenbg.jpg");
+  background-image: url("background.jpg");
   font-family: Segoe UI, Roboto, Source Sans Pro, Helvetica, Arial, sans-serif;
 }
 
@@ -18,6 +18,18 @@ a {
 
 h2 {
   color: #fff;
+}
+
+table {
+  width: 100%;
+}
+
+td span{
+  float: left;
+}
+td p{
+  float: left;
+  text-align: left;
 }
 
 /* Containers */
