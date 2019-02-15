@@ -12,9 +12,9 @@ const tracks = {
     ],[
         "13:00", "Lunch", "Solas Room", 'Bloomberg', 'Your Lunch on the day of SISTEM is provided courtesy of Bloomberg!'
     ],[
-        "14:00", "The History of Irish Netsocs", "Solas Room", 'Niall Murphy', 'Niall Murphy currently works at Microsoft as an SRE, and indeed co-edited the now famous Google Site Reliability Engineering Book. Before this, however, Niall was a founding member of UCD Netsoc, and in a SISTEM exclusive, explores the storied history of netsocs, detailing the trials, tribulatios, and what’s on the horizon.'
+        "14:00", "The History of Irish Netsocs", "Solas Room", 'Niall Murphy currently works at Microsoft as Global Head of Azure SRE, and co-edited the now famous Google Site Reliability Engineering Book. Before this, however, Niall was the founder of UCD Netsoc, and in a SISTEM exclusive, explores the storied history of Netsocs, detailing the trials, tribulations, and what’s on the horizon.'
     ],[
-        "15:00", "Arista Tech Talk", "Solas Room", 'David Sutton', 'TBA'
+        "15:00", "Enough about culture already?", "Solas Room", 'David Sutton', 'Arista Networks is a computer networking company headquartered in Santa Clara, California, USA. The company designs and sells multilayer network switches to deliver software-defined networking solutions for large datacenter, cloud computing, high-performance computing and high-frequency trading environments.  Arista Networks is looking for great Graduate Engineers/Interns interested in product development in C/C++ and Go to join the team in Dublin advancing the Software Defined Networking (SDN) revolution.  Be a part of the passionate, collaborative and innovative team at Arista. We seek innovative thinkers, team players and individuals who are passionate about creating great products that solve networking problems.'
     ],[
         "16:00", "Shipping it - How to put your software into production", "Solas Room", 'David Rieger', 'Demonware talk about how they deploy services, deliver tools and get them ready to be used by their customers. They take a look at different types of infrastructure, configuration tooling and deployment strategies, from scp and bare metal to CI/CD and Kubernetes.'
     ],[
