@@ -30,7 +30,7 @@ const tracks = {
         ],[
             "13:00", "Lunch", "Workshop Room", '', 'Your Lunch on the day of SISTEM is provided courtesy of Bloomberg!'
         ],[
-            "14:00", "Google Algorithms Workshop", "Workshop Room", '', 'Google bring us a problem solving workshop, showing you best practices for how to go about solving problems with code.'
+            "14:00", "Google Algorithms Workshop", "Workshop Room", '', 'The solving problems with code workshop is a collaborative problem solving workshop which requires participants to solve problems we deal with at Google. The workshop is a great way to give you foundations on how to attack a novel a problem. The problems will be presented on worksheets and while some coding experience is required, considering we will not be grading them, we would encourage students to try and participate even if they use pseudo code.  No laptop or devices required. You may want to tell attendees that they may have attended this before at Google - it is commonly known as our "Algorithms workshop". From Israel, graduated from the Technion IIT in 2008, and spent 6 years as a Software Engineering Officer in the Israeli Navy before moving to Dublin to work in Google 4.5 years ago. He is currently on the Google SRE Search team'
         ],[
             "15:45", "Lightning Talks", "Workshop Room", '', 'Feel like leaving your mark on the conference? Propose your own lightning talk at https://redbrickdcu.typeform.com/to/BHsqO1'
         ]
