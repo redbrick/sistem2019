@@ -2,17 +2,29 @@ table {
   padding: 1em;
 }
 
-thead {
-  padding: 1em;
-}
-
 td {
   padding: 1em;
 }
 
-tr:hover {
+thead > tr > th {
+   padding: 8px;
+}
+
+tbody>tr:hover {
    cursor: pointer;
    background-color: rgba(0, 0, 0, 0.2);
    transition: * 300ms;
+}
+
+.trackToggle {
+   background-color: #464650;
+   color: #85c222;
+   border: none;
+   box-shadow: 0 2px 2px black;
+   padding: 14px;
+   border-radius: 8px;
+   outline: none;
+   font-weight: bold;
+   font-size: 1em;
 }
 

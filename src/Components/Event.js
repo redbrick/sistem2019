@@ -6,7 +6,6 @@ import tracks from '../tracks.js';
 class Event extends Component {
     constructor(props){
         super(props)
-        const trackTypes = ['main', 'workshop']
 
         let initState = {};
 
@@ -61,6 +60,11 @@ class Event extends Component {
                   <td id={`location`}>
                      {track.loc}
                   </td>
+                  <td>
+                     <button className="trackToggle" onClick={this.displayExtra}>
+                        Expand
+                     </button>
+                  </td>
                </tr>
                <tr 
                   name={`${trackName}-${track.name}`}
@@ -76,7 +80,7 @@ class Event extends Component {
                >
                   <td colSpan='3'>
                      {
-                        track.by != ''
+                        track.by !== ''
                            ? (
                               <span style={{contentAlign: 'left', float: 'left'}}>
                                  By: {track.by}
@@ -126,6 +130,7 @@ class Event extends Component {
                            <th>Time</th>
                            <th>Name</th>
                            <th>Location</th>
+                           <th></th>
                         </tr>
                     </thead>
                     <tbody>
